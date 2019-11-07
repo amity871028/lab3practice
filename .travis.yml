@@ -18,7 +18,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_API_KEY
+    secure: 4d4f0194-d395-4c76-b618-61c8269f86f9
   app: test-my-travisci-project
   on:
     repo: amity871028/lab3practice
