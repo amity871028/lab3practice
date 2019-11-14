@@ -8,6 +8,9 @@ python:
 # command to run tests 
 # This is the script that enables travis to run the tests
 # There are many ways to do dependeing on how you want travis to run and get you coverage
+install:
+  - pip install -r requirements.txt
+  
 script: true
   - nosetests --with-coverage --coverage report
   
@@ -18,7 +21,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 4d4f0194-d395-4c76-b618-61c8269f86f9
+    secure:  $HEROKU_API_KEY
   app: lab3practice
   on:
     repo: amity871028/lab3practice
